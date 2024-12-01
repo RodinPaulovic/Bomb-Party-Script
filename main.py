@@ -22,7 +22,7 @@ def reconhecer_texto_na_tela(coordenadas):
     usadas = set()
     while True:
         try:            
-            if pyautogui.locateOnScreen('Imagem.png', confidence=0.8):
+            if pyautogui.locateOnScreen('imagem.png', confidence=0.8):
                 screenshot = np.array(ImageGrab.grab(bbox=coordenadas))
                 resultado = reader.readtext(screenshot)
                 if resultado:               
