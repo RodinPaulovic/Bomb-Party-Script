@@ -4,8 +4,8 @@ import numpy as np  # Biblioteca para manipulação de arrays numéricos
 import time  # Para gerenciar atrasos e intervalos no código
 import pyautogui  # Para automação de interações com a interface gráfica
 
-# Inicializa o leitor OCR para o idioma inglês (pode-se adicionar outros idiomas, como 'pt' para português)
-reader = easyocr.Reader(['en'])
+# Inicializa o leitor 
+reader = easyocr.Reader(['pt'])
 
 # Função para carregar palavras de um arquivo de texto
 def carregar_palavras():
