@@ -1,0 +1,8 @@
+{	
+   pyautogui
+   easyocr
+   pillow
+   numpy
+}
+
+pip install pyautogui easyocr pillow numpy torch
