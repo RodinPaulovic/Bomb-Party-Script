@@ -4,21 +4,12 @@ import numpy as np
 import time
 import pyautogui
 
-reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en']) 
 
-def carregar_palavras():
-    try:
-        with open('palavras.txt', 'r', encoding='utf-8') as file:
-            return set(file.read().splitlines())
-    except FileNotFoundError:
-        print("Erro: o arquivo 'palavras.txt' não foi encontrado.")
-        return set()
-
-def reconhecer_texto_na_tela(coordenadas):
-    palavras = carregar_palavras()
-    if not palavras:
-        return
-
+def play(coordenadas):
+    with open('palavras.txt', 'r', encoding='utf-8') as file:
+        palavra = set(file.read().splitlines())
+    
     usadas = set()
     while True:
         try:            
@@ -41,4 +32,4 @@ def reconhecer_texto_na_tela(coordenadas):
             print(f"Erro: {e}")
 
 coordenadas = (750, 560, 860, 610)
-reconhecer_texto_na_tela(coordenadas)
+play(coordenadas)
