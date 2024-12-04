@@ -11,7 +11,7 @@ reader = easyocr.Reader(['pt'])
 def play(coordenadas):
     # Configurar o arquivo palavras.txt
     with open('palavras.txt', 'r', encoding='utf-8') as file:
-        palavra = set(file.read().splitlines())
+        palavras = set(file.read().splitlines())
     
     usadas = set()  # Conjunto para armazenar palavras já sugeridas
     while True:  # Loop infinito para reconhecimento contínuo
@@ -47,6 +47,5 @@ def play(coordenadas):
 
 # Coordenadas da região da tela onde o texto será capturado (x1, y1, x2, y2)
 coordenadas = (750, 560, 860, 610)
-
 # Inicia o reconhecimento de texto na tela com as coordenadas especificadas
 play(coordenadas)
